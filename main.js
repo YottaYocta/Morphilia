@@ -108,6 +108,7 @@ light.position.set(100, 100, 100)
 light_2.position.set(-100, -100, -100)
 scene.add(light, light_2, light_3)
 function onWindwoResize() {
+    
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
@@ -142,6 +143,8 @@ var footer = document.querySelector('.footer');
 var mob = document.querySelector('.mob');
 
 window.addEventListener('resize', onWindwoResize, false)
+
+
 if (window.innerHeight > window.innerWidth - 200){
     notif.classList.remove('clear')
     notif.classList.add('tall')
@@ -172,36 +175,40 @@ function testKeypad() {
         keypad = false
     }
 }
-if (is_touch_device4() == false) {
-    keypad = false
-    show.addEventListener('click', testKeypad)
-    start.addEventListener('click', function() {
-        start.classList.add('clear')
-        footer.classList.add('clear')
-        main.classList.add('clear')
-        show.classList.remove('clear')
-        canvas.classList.remove('clear')
-        animate();
-        music.play()
+function test() {
+    if (is_touch_device4() == false) {
+        keypad = false
+        show.addEventListener('click', testKeypad)
+        start.addEventListener('click', function() {
+            start.classList.add('clear')
+            footer.classList.add('clear')
+            main.classList.add('clear')
+            show.classList.remove('clear')
+            canvas.classList.remove('clear')
+            animate();
+            music.play()
+            
+        });
         
-    });
+    } else if(is_touch_device4() == true) {
+        show.addEventListener('touchstart', testKeypad)
+        keypad = true;
+        start.addEventListener('touchstart', function() {
+            start.classList.add('clear')
+            footer.classList.add('clear')
+            main.classList.add('clear')
+            show.classList.remove('clear')
+            canvas.classList.remove('clear')
     
-} else if(is_touch_device4() == true) {
-    show.addEventListener('touchstart', testKeypad)
-    keypad = true;
-    start.addEventListener('touchstart', function() {
-        start.classList.add('clear')
-        footer.classList.add('clear')
-        main.classList.add('clear')
-        show.classList.remove('clear')
-        canvas.classList.remove('clear')
-
-        animate();
-        music.play()
+            animate();
+            music.play()
+            
+        });
         
-    });
-    
+    }
 }
+test();
+
 
 
 
