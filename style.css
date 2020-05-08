@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    overflow: hidden;
+}
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    transition-property: background-color;
+}
+.container-div {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+.button {
+    background: lightcoral;
+    padding: 5em;
+    border-radius: 3%;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    transition-property: background, opacity, color;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    width: 80%;
+    height: 80%;
+
+}
+.button p { 
+    font-size: 3.5vh;
+    line-height: 3;
+}
+
+.head {
+    width: 20vw;
+    height: 20vh;
+    border-radius: 3%;
+    background-color: rgb(255, 151, 151);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.head h1 {
+    cursor: pointer;
+
+}
+.head:hover {
+    background-color: rgb(255, 193, 193);
+
+}
+.clear {
+    opacity: 0;
+    cursor: default;
+    color: transparent;
+    transition: 2s;
+    z-index: -4;
+}
+.clear_mob {
+    opacity: 0;
+    cursor: default;
+    color: transparent;
+    transition: 1s;
+    z-index: -4;
+}
+.move {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60vh;
+    height: 35vh;
+    margin: 5vh;
+    display: flex;
+    flex-direction: column;
+    transition: 1s;
+}
+.move > div {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.w {
+    margin-bottom: 1vw;
+}
+.w > div {
+    background-color: rgb(255, 199, 199);
+    border-radius: 10%;
+    border-width: 1vh;
+    width: 25%;
+    height: 100%;
+    font-size: 5vh;
+    margin: 0vw 0.5vw 0vw 0.5vw;
+    padding: 5px;
+
+
+}
+.w-btn {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.asd > div {
+    background-color: rgb(255, 199, 199);
+    border-radius: 10%;
+    width: 25%;
+    height: 100%;
+    font-size: 5vh;
+    margin: 0vw 0.5vw 0vw 0.5vw;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.rotate {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60vh;
+    height: 35vh;
+    margin: 5vh;
+    display: flex;
+    flex-direction: column;
+    transition: 1s;
+}
+.rotate > div {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.up {
+    margin-bottom: 1vw;
+}
+.up > div {
+    background-color: rgb(255, 199, 199);
+    border-radius: 10%;
+    border-width: 1vh;
+    width: 25%;
+    height: 100%;
+    font-size: 4vh;
+    margin: 0vw 0.5vw 0vw 0.5vw;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+
+}
+.LCR > div {
+    background-color: rgb(255, 199, 199);
+    border-radius: 10%;
+    width: 25%;
+    height: 100%;
+    font-size: 4vh;
+    margin: 0vw 0.5vw 0vw 0.5vw;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.show {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgb(255, 199, 199);
+    width: 5vw;
+    height: 5vw;
+    margin: 1vw;
+    border-radius: 50%;
+    opacity: 80%;
+    transition: 0.5s;
+    transition-property: opacity;
+    cursor: pointer;
+}
+.show:hover {
+    opacity: 100%;
+}
+.notif {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: lightcoral;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+.notif div {
+    text-align: center;
+    font-size: 3vh;
+    line-height: 3;
+    width: 90%;
+    margin: 5vh;
+}
+.notif img {
+    width: 70vw;
+
+}
+.tall {
+    z-index: 99;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 1vh;
+    text-align: center;
+}
+.footer p {
+    color: black;
+    text-decoration: underline;
+}
+.unclear {
+    opacity: 100%;
+    transition: 1s;
+}
