@@ -379,9 +379,13 @@ function animate() {
     renderer.render(scene, camera);
     if (keypad == true) {
         mob.classList.remove('clear_mob')
+        rotate.classList.remove('short')
+        move.classList.remove('short')
         mob.classList.add('unclear')
     } else if (keypad == false) {
         mob.classList.add('clear_mob')
+        rotate.classList.add('short')
+        move.classList.add('short')
         mob.classList.remove('unclear')
     }
     
